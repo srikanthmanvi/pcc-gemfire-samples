@@ -20,5 +20,6 @@
 .idea/
 .iml
 tmp/
+**run/
 target/
 
