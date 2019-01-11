@@ -1,0 +1,59 @@
+start locator --name=locator1
+start server --name=gemfire-server1 --properties-file=../resources/gemfire-server.properties --server-port=0
+start server --name=gemfire-server2 --properties-file=../resources/gemfire-server.properties --server-port=0
+
+
+#start server --name=gemfire-server1 --properties-file=../resources/gemfire-server.properties --J=-XX:+UnlockCommercialFeatures --J=-XX:+FlightRecorder
+#start server --name=gemfire-server2 --properties-file=../resources/gemfire-server.properties --server-port=0
+
+
+#deploy --jar=/Users/smanvi/Workspace_piv/try-gemfire/functions/target/functions-1.0-SNAPSHOT.jar
+
+
+#start server --name=gemfire-server2 --properties-file=../resources/gemfire-server.properties --server-port=0 --name=cacheserver-6f3db7ac-48c3-4241-bd65-23bd801273bd
+#start server --name=gemfire-server2 --properties-file=../resources/gemfire-server.properties --server-port=0
+#start server --name=gemfire-server3 --properties-file=../resources/gemfire-server.properties --server-port=0
+
+
+
+#start server --name=geode-server2 --cache-xml-file=/Users/smanvi/Workspace/geode-ref/disk-store/src/main/resources/server-cache2.xml --server-port=0 --J=-Dgemfire.statistic-sampling-enabled
+
+
+#start server --name=geode-server1 --J="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8983" --properties-file=../resources/geode-server.properties
+#start server --name=geode-server2 --properties-file=../resources/geode-server.properties --server-port=0
+
+#start server --name=s1 --properties-file=../resources/geode-server.properties --server-port=0
+
+
+#undeploy --jar=common-1.0-SNAPSHOT.jar
+#undeploy --jar=functions-1.0-SNAPSHOT.jar
+
+#deploy --jar=/Users/smanvi/Workspace_piv/try-gemfire/common/target/common-1.0-SNAPSHOT.jar
+#deploy --jar=/Users/smanvi/Workspace_piv/try-gemfire/cahcelistener1/target/cahcelistener1-1.0-SNAPSHOT.jar
+#deploy --jar=/Users/smanvi/Workspace_piv/try-gemfire/cachelistener2/target/cachelistener2-1.0-SNAPSHOT.jar
+#deploy --jar=/Users/smanvi/Workspace_piv/try-gemfire/functions/target/functions-1.0-SNAPSHOT.jar
+
+#alter region --name=/Customer --cache-listener=io.pivotal.support.listener.Listener1,io.pivotal.support.listener.Listener2
+#alter region --name=/TestRegion --cache-listener=fully.qualified.name.Listener1,fully.qualified.name.Listener1.Listener2
+
+#Debug mode :
+#start locator --name=locator1 --J="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5000"
+#start server --name=geode-server1 --J="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8983" --properties-file=../resources/geode-server.properties --server-port=0
+#start server --name=geode-server2 --J="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8983" --properties-file=../resources/geode-server.properties --server-port=0
+
+################## FLAGS ##################
+
+#Add this to start server to trace sampling
+# --J=-Dgemfire.stats.debug.traceStatArchiveWriter=true
+
+# For remote Debugging
+# --J="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8983"
+
+################## FLAGS ##################
+
+#execute function --id=region-locking-function --region=/Customer
+#put --key=2 --value="abc" --region=/Customer
+#put --key=3 --value="abc12" --region=/Customer
+#put --key=4 --value="ab234c" --region=/Customer
+#describe region --name=/Customer
+#describe region --name=/Order
