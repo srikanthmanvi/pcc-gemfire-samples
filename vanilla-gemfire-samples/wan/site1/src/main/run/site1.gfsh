@@ -1,0 +1,3 @@
+start locator --name=site1_loc1 --port=10334 --J='-Dgemfire.remote-locators=localhost[10336]' --J='-Dgemfire.distributed-system-id=1'
+#start server --name=site1_server1 --server-port=40404 --J='-Dgemfire.remote-locators=localhost[10336]' --properties-file=/Users/smanvi/reference_projects/wan/site1/src/main/resources/site1.properties
+start server --name=site1_server1 --server-port=40404 --J='-Dgemfire.remote-locators=localhost[10336]' --properties-file=../resources/site1.properties

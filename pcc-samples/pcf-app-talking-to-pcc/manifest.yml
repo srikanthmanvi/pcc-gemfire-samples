@@ -1,0 +1,6 @@
+applications:
+- name: pcc-client
+  path: target/pcf-app-talking-to-pcc-1.0-SNAPSHOT.jar
+  health-check-type: process
+  services:
+  - ss-pcc

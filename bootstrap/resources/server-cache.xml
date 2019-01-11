@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE cache PUBLIC
+        "-//GemStone Systems, Inc.//GemFire Declarative Caching 7.0//EN"
+        "http://www.gemstone.com/dtd/cache7_0.dtd">
+<cache>
+
+    <!--<disk-store name="my-disk-store" auto-compact="false" compaction-threshold="5" max-oplog-size="2"/>-->
+
+    <region name="Customer" refid="REPLICATE">
+    <!--<region-attributes data-policy="persistent-replicate" statistics-enabled="true" disk-store-name="my-disk-store">-->
+
+
+
+    </region>
+
+    <!--<region name="PRINCIPAL_TRADE">-->
+        <!--<region-attributes data-policy="persistent-partition" disk-store-name="partitionedregion">-->
+            <!--<partition-attributes redundant-copies="1"/>-->
+            <!--&lt;!&ndash;<cache-loader>&ndash;&gt;-->
+                <!--&lt;!&ndash;<class-name>com.bnpparibas.tpa.gemfire.pm.cacheloader.PrincipalTradeCacheLoader</class-name>&ndash;&gt;-->
+            <!--&lt;!&ndash;</cache-loader>&ndash;&gt;-->
+
+            <!--<eviction-attributes>-->
+                <!--<lru-heap-percentage action="overflow-to-disk"/>-->
+            <!--</eviction-attributes>-->
+        <!--</region-attributes>-->
+    <!--</region>-->
+
+    <!--<resource-manager eviction-heap-percentage="40" critical-heap-percentage="90"/>-->
+
+    <!--<region name="PRINCIPAL_TRADE_DETAIL">-->
+        <!--<region-attributes data-policy="persistent-partition" disk-store-name="partitionedregion">-->
+            <!--<partition-attributes redundant-copies="1" colocated-with="/PRINCIPAL_TRADE">-->
+                <!--<partition-resolver>-->
+                    <!--<class-name>com.bnpparibas.tpa.domain.pm.resolver.PMPartitionResolver</class-name>-->
+                <!--</partition-resolver>-->
+            <!--</partition-attributes>-->
+
+            <!--&lt;!&ndash;<cache-loader>&ndash;&gt;-->
+                <!--&lt;!&ndash;<class-name>com.bnpparibas.tpa.gemfire.pm.cacheloader.PrincipalTradeDetailCacheLoader</class-name>&ndash;&gt;-->
+            <!--&lt;!&ndash;</cache-loader>&ndash;&gt;-->
+
+            <!--<eviction-attributes>-->
+                <!--<lru-heap-percentage action="overflow-to-disk"/>-->
+            <!--</eviction-attributes>-->
+        <!--</region-attributes>-->
+    <!--</region>-->
+
+</cache>

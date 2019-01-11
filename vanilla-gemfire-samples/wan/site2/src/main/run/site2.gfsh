@@ -1,0 +1,2 @@
+start locator --name=site2_loc1 --port=10336 --J='-Dgemfire.jmx-manager-http-port=7071' --J='-Dgemfire.jmx-manager-port=1100' --J='-Dgemfire.distributed-system-id=2'
+start server --name=site2_server1 --server-port=40406 --properties-file=../resources/site2.properties
