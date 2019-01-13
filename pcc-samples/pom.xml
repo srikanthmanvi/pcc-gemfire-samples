@@ -10,6 +10,6 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>pcf-app-talking-to-pcc</module>
+        <module>pcf-app-talking-to-non-tls-pcc</module>
     </modules>
 </project>
