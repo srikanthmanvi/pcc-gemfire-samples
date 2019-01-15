@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.gemfire.config.annotation.EnableEntityDefinedRegions;
 
 @SpringBootApplication
-//@ClientCacheApplication(locators = {@ClientCacheApplication.Locator(port = 10334, host = "localhost")})
 @EnableEntityDefinedRegions
 public class ClientApp {
 
